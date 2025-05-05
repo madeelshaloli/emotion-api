@@ -20,7 +20,7 @@ def detect_emotion():
 
     try:
         # Detect face and extract cropped face image
-        detections = DeepFace.extract_faces(img_path=image_path, enforce_detection=True)
+        detections = DeepFace.extract_faces(img_path=image_path, enforce_detection=False)
 
         if not detections:
             return jsonify({'error': 'No face detected'}), 400
