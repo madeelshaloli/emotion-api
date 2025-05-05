@@ -7,15 +7,6 @@ import cv2
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def home():
-    return '''
-    <h2>Upload Image to Detect Emotion</h2>
-    <form action="/emotion" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*" required>
-      <input type="submit" value="Detect">
-    </form>
-    '''
 
 
 @app.route('/emotion', methods=['POST'])
